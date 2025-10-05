@@ -4,7 +4,7 @@ def fetch_linkedin(query="cybersecurity", limit=10):
     params = {
         "engine": "google",
         "q": f"site:linkedin.com/posts {query}",
-        "api_key": "ad2b00f7c36508bdbb76fc60fb9d65fc2ed18ede4ad97b27168ed036513a8378"
+        "api_key": "Your SerpAPI Key"
     }
 
     search = GoogleSearch(params)
@@ -19,5 +19,6 @@ def fetch_linkedin(query="cybersecurity", limit=10):
             "text": result.get("snippet", ""),
             "url": result.get("link", "")
         })
+
 
     return linkedin_data
