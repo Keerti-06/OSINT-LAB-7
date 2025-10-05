@@ -1,8 +1,8 @@
 import praw, os
 from dotenv import load_dotenv
 
-REDDIT_ID = "fv5bnbWFFdqupbyAtvxowQ"
-REDDIT_SECRET = "JpdyOGw2T2OZAM7MUj3Ycy4pmHIWHA"
+REDDIT_ID = "Your Reddit Id"
+REDDIT_SECRET = "Your Reddit secret Id"
 
 reddit = praw.Reddit(
     client_id=REDDIT_ID,
@@ -22,4 +22,5 @@ def fetch_reddit(subreddit="technology", limit=10):
             "url": f"https://reddit.com{post.permalink}"
         })
     return results
+
 
