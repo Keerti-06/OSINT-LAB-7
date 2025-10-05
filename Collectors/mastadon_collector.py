@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-MASTODON_TOKEN = os.getenv("QM-K0bv0YpMWV3NH6xM4X2G9aadTJTgrbxIlkGCbwjU")
+MASTODON_TOKEN = os.getenv("Your Mastodon Token")
 
 mastodon = Mastodon(
     access_token=MASTODON_TOKEN,
@@ -23,3 +23,4 @@ def fetch_mastodon(hashtag="osint", limit=10):
             "url": p["url"]
         })
     return results
+
